@@ -3,9 +3,9 @@ package dev.prtjohanson.exc_2023_02_18.exc7;
 import java.math.BigDecimal;
 
 public class Employee {
-    String id;
-    String name;
-    BigDecimal salary;
+    private String id;
+    private String name;
+    private BigDecimal salary;
 
     public Employee(String id, String name, BigDecimal salary) {
         this.id = id;

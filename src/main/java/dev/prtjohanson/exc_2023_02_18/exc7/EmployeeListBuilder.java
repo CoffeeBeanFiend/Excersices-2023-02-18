@@ -8,7 +8,7 @@ public class EmployeeListBuilder {
     final private int numberOfEmployeesToGenerate;
     final private ArrayList<Employee> employees;
 
-    final String[] names = {
+    final private String[] names = {
             "Zanzibar",
             "Kalju",
             "Elmar",
