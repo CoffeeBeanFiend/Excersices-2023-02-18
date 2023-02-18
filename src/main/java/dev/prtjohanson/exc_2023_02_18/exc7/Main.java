@@ -7,16 +7,16 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Employee> employees = new ArrayList();
+        final ArrayList<Employee> employees = new ArrayList();
 
-        BigDecimal salaryThreshold = new BigDecimal(30000);
+        final BigDecimal salaryThreshold = new BigDecimal(30000);
 
-        IntStream.range(0, 4).forEach(
+        IntStream.range(0, 3).forEach(
                 (int i) -> employees.add(
                         new Employee(
                                 "" + i ,
                                 "Employee " + i,
-                                new BigDecimal(100 + i * 10000)
+                                new BigDecimal(100 + i * 15000)
                         )
                 )
         );
