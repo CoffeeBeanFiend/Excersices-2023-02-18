@@ -54,12 +54,10 @@ public class Main {
                 )
         );
 
-        Object[] sortedEmployees = employees.stream().sorted(
+        employees.stream().sorted(
                 Comparator.comparing(Employee::getName)
-        ).toArray();
-
-        for(Object employee: sortedEmployees) {
-            System.out.println(employee);
-        }
+        ).forEachOrdered(
+            (employee) -> System.out.println(employee)
+        );
     }
 }
