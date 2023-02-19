@@ -12,10 +12,12 @@ public class Main {
     public static void main(String[] args) {
         final ArrayList<Employee> employees = new EmployeeListBuilder(10).getEmployees();
 
-        employees.stream().sorted(
+        Employee sortedEmployees[] = employees.stream().sorted(
                 Comparator.comparing(Employee::getName)
-        ).forEachOrdered(
-            (employee) -> System.out.println(employee)
-        );
+        ).toArray(Employee[]::new);
+
+        for (Employee e: sortedEmployees) {
+            System.out.println(e);
+        }
     }
 }
