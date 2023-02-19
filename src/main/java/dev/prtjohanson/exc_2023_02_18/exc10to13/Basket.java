@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class Basket {
-    private HashMap<Product, Integer> quantityByProduct = new HashMap<>();
+    final private HashMap<Product, Integer> quantityByProduct = new HashMap<>();
 
     public Basket add(Product product, Integer quantityToAdd) {
         if (!(quantityToAdd != 0)) {

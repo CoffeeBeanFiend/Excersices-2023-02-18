@@ -36,7 +36,7 @@ public class Main {
         // Add products to basket.
         Arrays.stream(products).forEach(product -> basket.add(
                 product,
-                (int)(32 + Math.random()*100) // Generate random numbers between 32 and 130.
+                (int)(32 + Math.random()*100) // Generate random numbers between 32 and 132.
         ));
 
         // Remove some products from basket, but always less than was added.
