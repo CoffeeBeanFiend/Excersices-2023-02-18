@@ -45,12 +45,12 @@ public class EmployeeListBuilder {
 
         final int nrOfNames = names.length;
 
-        IntStream.range(0, 10).forEach(
+        IntStream.range(0, numberOfEmployeesToGenerate).forEach(
                 (int i) -> employees.add(
                         new Employee(
                                 "" + i ,
                                 names[i % nrOfNames] + " " + names[((i+1)*2) % nrOfNames],
-                                new BigDecimal(100 + i * 10000)
+                                new BigDecimal(100 + i * 15000)
                         )
                 )
         );
