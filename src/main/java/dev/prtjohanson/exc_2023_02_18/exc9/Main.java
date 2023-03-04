@@ -14,7 +14,7 @@ public class Main {
         Optional<Employee> maxSalaryEmployee = employees.stream().max(Comparator.comparing(Employee::getSalary));
 
         if (maxSalaryEmployee.isPresent()) {
-            System.out.println(maxSalaryEmployee);
+            System.out.println(maxSalaryEmployee.get());
         } else {
             System.out.println("No salary employee with max salary found!");
         }

@@ -28,7 +28,7 @@ public class SeasonProvider {
 
         IntStream.range(1, nrOfSeasons + 1).forEachOrdered(
                 (seasonNr) -> {
-                    List<Episode> seasonEpisodes = new ArrayList<>();
+                    final List<Episode> seasonEpisodes = new ArrayList<>();
                     final String seasonName = "Season " + seasonNr;
 
                     IntStream.range(1, episodesPerSeason + 1).forEachOrdered(

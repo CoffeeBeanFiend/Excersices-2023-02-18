@@ -46,6 +46,6 @@ public class Employee {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
-                '}';
+                "}\n";
     }
 }

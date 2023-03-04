@@ -17,7 +17,7 @@ public class Usage {
                 .flatMap(season -> season.episodes.stream())
                 .collect(Collectors.toList());
 
-        System.out.println("A list of all episodes.");
+        System.out.println("A list of all episodes:");
         allEpisodes.forEach(episode -> System.out.println(episode.episodeName));
         System.out.println("End of list.\n");
 

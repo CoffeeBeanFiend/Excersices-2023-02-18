@@ -8,9 +8,11 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) {
-        final ArrayList<Employee> employees = new EmployeeListBuilder(3).getEmployees();
+        final ArrayList<Employee> employees = new EmployeeListBuilder(10).getEmployees();
 
         final BigDecimal salaryThreshold = new BigDecimal(30000);
+
+        System.out.println(employees);
 
         Optional<Employee> firstFoundEmployee =
                 employees.stream()
@@ -19,7 +21,7 @@ public class Main {
                 ).findFirst();
 
         if (firstFoundEmployee.isEmpty()) {
-            throw new RuntimeException("No non-null employee found with salary >= " + salaryThreshold);
+            System.out.println("No non-null employee found with salary >= " + salaryThreshold);
         } else {
             System.out.println("Found Employee: " + firstFoundEmployee.get());
         }
