@@ -7,9 +7,11 @@ import java.time.LocalDate;
 public class OrderService {
     final private Basket basket;
     BigInteger total;
+    LocalDate date;
 
-    public OrderService(Basket basket) {
+    public OrderService(Basket basket, LocalDate date) {
         this.basket = basket;
+        this.date = date;
     }
 
     public BigInteger getTotal() {
@@ -18,10 +20,10 @@ public class OrderService {
         }
 
         return total = basket.getAllProductsWithQuantity()
-                // Filter out available products by current date.
+                // Filter out available products by specified order date.
                 // In the hashmap entry, key is the product.
                 .filter(
-                    (entry) -> entry.getKey().isAvailable(LocalDate.now())
+                    (entry) -> entry.getKey().isAvailable(date)
                 )
 
                 // Calculate total by multiplying price by quantity.
