@@ -71,6 +71,8 @@ public class Main {
                         System.out.println(
                                 "Total: " + (new OrderService(basket, dateOfFulfillment)).getTotal()
                         );
+
+                        break;
                     }
 
                     case QUIT:
